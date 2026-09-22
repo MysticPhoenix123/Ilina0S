@@ -57,7 +57,7 @@ IlinaOS is built entirely as a client-side web application using HTML, CSS, and 
 
 Each app is represented by its own window. JavaScript manages window stacking, dragging, resizing, minimizing, maximizing, opening, and closing. A shared z-index system keeps the active window in front, while reusable window functions allow the different apps to behave consistently.
 
-SparkLog, TaskList, and Ilina Code Studio use `localStorage`, which means their data can remain available in the browser even after the page is refreshed.
+SparkLog, TaskList, and Ilina Code Studio use localStorage, which means their data can remain available in the browser even after the page is refreshed.
 
 Ilina Code Studio uses Monaco Editor, the editor technology behind VS Code, for syntax highlighting and code editing. Its virtual file system is managed in JavaScript and stored inside the browser rather than directly modifying files on the user's computer.
 
