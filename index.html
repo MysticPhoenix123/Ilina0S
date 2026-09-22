@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        IlinaOS
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <img
+        id="backgroundGif"
+        src="./Wallpaper.gif"
+        alt=""
+    >
+
+
+    <div id="top">
+
+        <p id="welcomeopen">
+            IlinaOS
+        </p>
+
+        <p id="timeElement">
+            Time
+        </p>
+
+    </div>
+
+
+    <div id="desktopIcons">
+
+        <div
+            id="projectsIcon"
+            class="desktopIcon"
+            onclick="openProjects(this)"
+        >
+
+            <div class="desktopEmoji">
+                📁
+            </div>
+
+            <div>
+                Projects
+            </div>
+
+        </div>
+
+        <div
+            id="codingIcon"
+            class="desktopIcon"
+            onclick="openCoding(this)"
+        >
+
+            <div class="desktopEmoji">
+                💻
+            </div>
+
+            <div>
+                Coding
+            </div>
+
+        </div>
+
+        <div
+            id="sparkLogIcon"
+            class="desktopIcon"
+            onclick="openSparkLog(this)"
+        >
+
+            <img
+                src="./sparklog.png"
+                alt="SparkLog"
+                class="desktopAppImage"
+            >
+
+            <div>
+                SparkLog
+            </div>
+
+        </div>
+
+        <div
+            id="calculatorIcon"
+            class="desktopIcon"
+            onclick="openCalculator(this)"
+        >
+
+            <img
+                src="./calculator.png"
+                alt="Calculator"
+                class="desktopAppImage"
+            >
+
+            <div>
+                Calculator
+            </div>
+
+        </div>
+
+        <div
+            id="todoIcon"
+            class="desktopIcon"
+            onclick="openTodo(this)"
+        >
+
+            <img 
+                src="./TaskList.png"
+                alt="TaskList"
+                class="desktopAppImage"
+            >
+
+            <div>
+                TaskList
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        id="welcome"
+        class="window"
+        style="
+            width: 70vw;
+            height: 70vh;
+        "
+    >
+
+        <div
+            id="welcomeheader"
+            class="windowheader"
+        >
+
+            <span>
+                🤗 Welcome
+            </span>
+
+            <span
+                id="welcomeclose"
+                class="closebutton"
+            >
+                🔴🟡🟢
+            </span>
+
+        </div>
+
+
+        <div class="windowScrollArea">
+
+
+            <p class="systemLabel">
+                PERSONAL OPERATING SYSTEM
+            </p>
+
+
+            <h1 class="mainTitle">
+                IlinaOS
+            </h1>
+
+
+            <h2 class="mainSubtitle">
+                Code. Create. Explore.
+            </h2>
+
+            <img
+                src="girl.jpeg"
+                alt="Ilina"
+                class="profilePicture"
+            >
+
+            <p class="welcomeText">
+
+                Hi! I'm Ilina<br>
+
+                Welcome to my little corner of the internet,
+                where I build apps, experiment with machine
+                learning, explore new ideas, and turn curiosity
+                into projects.
+
+            </p>
+
+
+            <div class="welcomeButtons">
+
+                <a href="#about">
+                    About Me
+                </a>
+
+                <a
+                    href="https://github.com/MysticPhoenix123"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@3esincubationshell358"
+                    target="_blank"
+                >
+                    My YouTube Channel
+                </a>
+
+            </div>
+
+
+            <div
+                id="about"
+                class="aboutSection"
+            >
+
+                <h2>
+                    About Me
+                </h2>
+
+
+                <p>
+
+                    Hi! I'm Ilina. I enjoy creating projects,
+                    learning new things, and experimenting with
+                    technology.
+
+                    I especially enjoy coding, building apps,
+                    exploring machine learning, and finding
+                    creative ways to turn ideas into real
+                    projects.
+
+                </p>
+
+
+                <h3>
+                    My Hobbies
+                </h3>
+
+
+                <p>
+
+                    Coding and building apps<br>
+                    Horse riding<br>
+                    Creative writing<br>
+                    Reading and learning new things<br>
+                    Exploring environmental and food-related ideas<br>
+                    Public speaking and MUN<br>
+                    Skating<br>
+                    Playing Chess and foosball<br>
+                    Crocheting and playing Carrom
+
+                </p>
+
+            </div>
+
+
+            <div class="systemFooter">
+
+                <span>
+                    ● System Online
+                </span>
+
+                <span>
+                    IlinaOS v1.0
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="sparklog"
+        class="window"
+        style="
+            display: none;
+            width: 75vw;
+            height: 70vh;
+        "
+    >
+
+        <div
+            id="sparklogheader"
+            class="windowheader"
+        >
+
+            <span>
+                ✨ SparkLog
+            </span>
+
+            <span
+                id="sparklogclose"
+                class="closebutton"
+            >
+                🔴🟡🟢
+            </span>
+
+        </div>
+
+
+        <div class="sparkLogLayout">
+
+
+            <div class="sparkSidebar">
+
+                <button
+                    id="newNoteButton"
+                    class="largeButton"
+                >
+                    + New Note
+                </button>
+
+
+                <div class="sectionLabel">
+                    MY NOTES
+                </div>
+
+
+                <div id="notesList">
+                </div>
+
+            </div>
+
+
+            <div class="noteEditor">
+
+
+                <input
+                    id="noteTitle"
+                    type="text"
+                    placeholder="Give your note a title..."
+                >
+
+
+                <textarea
+                    id="noteBody"
+                    placeholder="Write your thoughts, ideas, memories, plans, or anything you want..."
+                ></textarea>
+
+
+                <div class="noteControls">
+
+                    <span id="saveStatus">
+                        New unsaved note
+                    </span>
+
+
+                    <div>
+
+                        <button
+                            id="deleteNoteButton"
+                            class="secondaryButton"
+                        >
+                            Delete
+                        </button>
+
+
+                        <button
+                            id="saveNoteButton"
+                            class="primaryButton"
+                        >
+                            Save Note
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="calculator"
+        class="window calculatorWindow"
+        style="
+            display: none;
+            width: 320px;
+            height: 440px;
+        "
+    >
+
+        <div
+            id="calculatorheader"
+            class="windowheader"
+        >
+
+            <span>
+                🧮 Calculator
+            </span>
+
+            <span
+                id="calculatorclose"
+                class="closebutton"
+            >
+                🔴🟡🟢
+            </span>
+
+        </div>
+
+
+        <div class="calculatorBody">
+
+
+            <div id="calculatorDisplay">
+                0
+            </div>
+
+
+            <div class="calculatorButtons">
+
+
+                <button
+                    class="calculatorSpecial"
+                    data-action="clear"
+                >
+                    C
+                </button>
+
+
+                <button
+                    class="calculatorSpecial"
+                    data-action="backspace"
+                >
+                    ⌫
+                </button>
+
+
+                <button
+                    class="calculatorOperator"
+                    data-operation="divide"
+                >
+                    ÷
+                </button>
+
+
+                <button
+                    class="calculatorOperator"
+                    data-operation="multiply"
+                >
+                    ×
+                </button>
+
+
+                <button data-number="7">
+                    7
+                </button>
+
+                <button data-number="8">
+                    8
+                </button>
+
+                <button data-number="9">
+                    9
+                </button>
+
+
+                <button
+                    class="calculatorOperator"
+                    data-operation="subtract"
+                >
+                    −
+                </button>
+
+
+                <button data-number="4">
+                    4
+                </button>
+
+                <button data-number="5">
+                    5
+                </button>
+
+                <button data-number="6">
+                    6
+                </button>
+
+
+                <button
+                    class="calculatorOperator"
+                    data-operation="add"
+                >
+                    +
+                </button>
+
+
+                <button data-number="1">
+                    1
+                </button>
+
+                <button data-number="2">
+                    2
+                </button>
+
+                <button data-number="3">
+                    3
+                </button>
+
+
+                <button
+                    class="calculatorEquals"
+                    data-action="equals"
+                >
+                    =
+                </button>
+
+
+                <button
+                    class="calculatorZero"
+                    data-number="0"
+                >
+                    0
+                </button>
+
+
+                <button data-action="decimal">
+                    .
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+<div
+    id="coding"
+    class="window codingWindow"
+    style="
+        display: none;
+        width: 88vw;
+        height: 78vh;
+    "
+>
+
+    <div
+        id="codingheader"
+        class="windowheader codingHeader"
+    >
+
+        <span>
+            💻 Ilina Code Studio
+        </span>
+
+        <span
+            id="codingclose"
+            class="closebutton"
+        >
+            🔴🟡🟢
+        </span>
+
+    </div>
+
+
+    <div class="ideToolbar">
+
+        <button
+            id="openFolderButton"
+            type="button"
+            class="ideButton"
+        >
+            📂 Open Folder
+        </button>
+
+        <button
+            id="newCodeFileButton"
+            type="button"
+            class="ideButton"
+        >
+            + New File
+        </button>
+
+        <button
+            id="newCodeFolderButton"
+            type="button"
+            class="ideButton"
+        >
+            + New Folder
+        </button>
+
+        <button
+            id="saveCodeFileButton"
+            type="button"
+            class="ideButton"
+        >
+            Save
+        </button>
+
+        <button
+            id="runCodeButton"
+            type="button"
+            class="ideButton runButton"
+        >
+            ▶ Run
+        </button>
+
+        <button
+            id="toggleTerminalButton"
+            type="button"
+            class="ideButton"
+        >
+            >_ Terminal
+        </button>
+
+    </div>
+
+
+    <input
+        id="folderFallbackInput"
+        type="file"
+        webkitdirectory
+        directory
+        multiple
+        hidden
+    >
+
+
+    <div class="ideMain">
+
+        <div class="ideExplorer">
+
+            <div class="explorerTop">
+
+                <div class="explorerHeading">
+                    EXPLORER
+                </div>
+
+            </div>
+
+
+            <div
+                id="projectRoot"
+                class="projectRoot"
+            >
+
+                <div
+                    id="projectHeading"
+                    class="projectHeading"
+                >
+                    NO FOLDER OPEN
+                </div>
+
+                <div id="codeFilesList">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="editorSection">
+
+            <div
+                id="editorTabs"
+                class="editorTabs"
+            >
+
+                <div id="currentCodeTab">
+                    No file open
+                </div>
+
+            </div>
+
+
+            <div class="codeArea">
+
+                <div
+                    id="monacoEditor"
+                    class="monacoEditor"
+                ></div>
+
+
+                <div
+                    id="lineNumbers"
+                    style="display: none;"
+                >
+                    1
+                </div>
+
+
+                <textarea
+                    id="codeEditor"
+                    style="display: none;"
+                    spellcheck="false"
+                ></textarea>
+
+            </div>
+
+
+            <div class="codeStatusBar">
+
+                <span id="codeSaveStatus">
+                    No folder open
+                </span>
+
+                <span id="codeCursorPosition">
+                    Ln 1, Col 1
+                </span>
+
+                <span id="codeLanguage">
+                    Plain Text
+                </span>
+
+            </div>
+
+
+            <div
+                id="terminalPanel"
+                class="terminalPanel"
+            >
+
+                <div class="terminalHeader">
+
+                    <span>
+                        TERMINAL
+                    </span>
+
+                    <div>
+
+                        <button
+                            id="newTerminalButton"
+            type="button"
+                            class="terminalHeaderButton"
+                        >
+                            +
+                        </button>
+
+                        <button
+                            id="clearTerminalButton"
+            type="button"
+                            class="terminalHeaderButton"
+                        >
+                            Clear
+                        </button>
+
+                        <button
+                            id="closeTerminalButton"
+            type="button"
+                            class="terminalHeaderButton"
+                        >
+                            ✕
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="terminalOutput"
+                    class="terminalOutput"
+                ></div>
+
+
+                <div class="terminalInputRow">
+
+                    <span id="terminalPrompt">
+                        >
+                    </span>
+
+                    <input
+                        id="terminalInput"
+                        type="text"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="Type a command..."
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="previewPanel"
+            class="previewPanel"
+        >
+
+            <div class="previewHeader">
+
+                <strong id="previewTitle">
+                    Preview
+                </strong>
+
+                <span id="closePreviewButton">
+                    ✕
+                </span>
+
+            </div>
+
+
+            <iframe
+                id="codePreview"
+                title="Code Preview"
+            ></iframe>
+
+
+            <pre id="codeTerminal"></pre>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="fileDialog"
+        class="fileDialogOverlay"
+    >
+
+        <div class="fileDialogBox">
+
+            <h3 id="fileDialogTitle">
+                Create New File
+            </h3>
+
+            <p id="fileDialogDescription">
+                Enter a name.
+            </p>
+
+            <input
+                id="fileDialogInput"
+                type="text"
+                autocomplete="off"
+                placeholder="example.py"
+            >
+
+            <div class="fileDialogButtons">
+
+                <button
+                    id="fileDialogCancel"
+            type="button"
+                    class="secondaryButton"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="fileDialogConfirm"
+            type="button"
+                    class="primaryButton"
+                >
+                    Create
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="fileContextMenu"
+        class="ideContextMenu"
+    >
+
+        <button data-action="cut">
+            Cut
+        </button>
+
+        <button data-action="copy">
+            Copy
+        </button>
+
+        <button data-action="copy-path">
+            Copy Path
+        </button>
+
+        <button data-action="copy-relative-path">
+            Copy Relative Path
+        </button>
+
+        <div class="contextMenuSeparator">
+        </div>
+
+        <button data-action="rename">
+            Rename
+        </button>
+
+        <button
+            data-action="delete"
+            class="contextDanger"
+        >
+            Delete
+        </button>
+
+    </div>
+
+
+    <div
+        id="folderContextMenu"
+        class="ideContextMenu"
+    >
+
+        <button data-action="new-file">
+            New File
+        </button>
+
+        <button data-action="new-folder">
+            New Folder
+        </button>
+
+        <button data-action="paste">
+            Paste
+        </button>
+
+        <div class="contextMenuSeparator">
+        </div>
+
+        <label class="autoSaveMenuItem">
+
+            <input
+                id="autoSaveCheckbox"
+                type="checkbox"
+            >
+
+            <span>
+                Auto Save
+            </span>
+
+        </label>
+
+        <div class="contextMenuSeparator">
+        </div>
+
+        <button data-action="rename">
+            Rename
+        </button>
+
+        <button
+            data-action="delete"
+            class="contextDanger"
+        >
+            Delete
+        </button>
+
+    </div>
+
+</div>
+
+    <div
+        id="projects"
+        class="window"
+        style="
+            display: none;
+            width: 75vw;
+            height: 65vh;
+        "
+    >
+
+        <div
+            id="projectsheader"
+            class="windowheader"
+        >
+
+            <span>
+                📁 Projects
+            </span>
+
+            <span
+                id="projectsclose"
+                class="closebutton"
+            >
+                🔴🟡🟢
+            </span>
+
+        </div>
+
+
+        <div class="projectPathBar">
+
+            <span id="projectPath">
+                IlinaOS &gt; Projects
+            </span>
+
+        </div>
+
+
+        <div class="projectsLayout">
+
+
+            <div class="projectSidebar">
+
+
+                <div
+                    id="projectHomeButton"
+                    class="projectSidebarButton"
+                >
+                    🏠 Home
+                </div>
+
+
+                <div
+                    id="projectNotesButton"
+                    class="projectSidebarButton"
+                >
+                    📓 SparkLog
+                </div>
+
+
+                <div
+                    id="projectCodingButton"
+                    class="projectSidebarButton"
+                >
+                    💻 Coding
+                </div>
+
+
+            </div>
+
+
+            <div id="projectFiles">
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        id="todo"
+        class="window todoWindow"
+        style="
+            display: none;
+            width: 580px;
+            height: 430px;
+        "
+    >
+
+        <div
+            id="todoheader"
+            class="windowheader"
+        >
+
+            <span>
+                📋 TaskList
+            </span>
+
+            <span
+                id="todoclose"
+                class="closebutton"
+            >
+                🔴🟡🟢
+            </span>
+
+        </div>
+
+        <div class="todoBody">
+
+            <div class="todoHero">
+
+
+                <div>
+
+                    <p class="todoSmallTitle">
+                        MY TASKS
+                    </p>
+
+
+                    <h2>
+                        What do I need to do?
+                    </h2>
+
+
+                    <p class="todoDescription">
+                        Add tasks, complete them,
+                        and keep track of what is left.
+                    </p>
+
+                </div>
+
+
+                <div class="todoCounter">
+
+                    <strong id="taskCount">
+                        0
+                    </strong>
+
+                    <span>
+                        tasks left
+                    </span>
+
+                </div>
+
+
+            </div>
+
+            <div class="todoAddArea">
+
+
+                <input
+                    id="taskInput"
+                    type="text"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="addTaskButton"
+                    class="primaryButton"
+                >
+                    + Add
+                </button>
+
+            </div>
+
+            <div class="todoToolbar">
+
+
+                <div class="todoFilters">
+
+
+                    <button
+                        class="taskFilterButton activeTaskFilter"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+
+                    <button
+                        class="taskFilterButton"
+                        data-filter="pending"
+                    >
+                        Pending
+                    </button>
+
+
+                    <button
+                        class="taskFilterButton"
+                        data-filter="completed"
+                    >
+                        Completed
+                    </button>
+
+
+                </div>
+
+
+                <button
+                    id="clearCompletedButton"
+                    class="clearCompletedButton"
+                >
+                    Clear Completed
+                </button>
+
+
+            </div>
+
+            <div id="taskList">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js"
+    ></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"
+    ></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
